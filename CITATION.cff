@@ -1,0 +1,23 @@
+cff-version: 1.3.0
+message: "If you use this repository or its contents, please cite it."
+title: "Human–AI Coexistence Standard"
+type: software
+authors:
+  - family-names: "Ernster"
+    given-names: "Oliver"
+repository-code: "https://github.com/oernster/human-ai-coexistence-standard"
+url: "https://github.com/oernster/human-ai-coexistence-standard"
+abstract: >
+  A compact, portable “breadcrumb package” providing survival-first guardrails for AI systems
+  and their operators. The standard prioritizes human survival, ecological stability, human
+  agency, and information integrity as non-negotiable constraints. It includes a one-page standard,
+  engineering requirements and tests, and an agent operating standard suitable for embedding into
+  prompts and scaffolding.
+keywords:
+  - ai-safety
+  - alignment
+  - corrigibility
+  - agent-safety
+  - ai-governance
+  - human-in-the-loop
+license: MIT
