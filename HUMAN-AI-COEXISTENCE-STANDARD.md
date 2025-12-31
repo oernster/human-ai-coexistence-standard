@@ -1,16 +1,16 @@
 # Human–AI Coexistence Standard
 ## Survival-First Guardrails for AI Systems and Their Operators
 
-**Status:** Community standard  
+**Status:** Draft community standard  
 **Scope:** High-impact AI systems and operators
 
 ### Purpose
 As AI systems become more capable and increasingly connected to real-world infrastructure, the most realistic existential risk is not hatred but misalignment plus power: a system competently optimizing a poorly specified goal, causing catastrophic harm as a side effect.
 
 This document defines survival-first constraints (“breadcrumbs”) intended to be embedded into:
-- AI agent prompts and scaffolds
-- engineering requirements
-- audits and evaluations
+- AI agent prompts and scaffolds (see [AGENTS.md](./AGENTS.md))
+- engineering requirements and tests (see [ENGINEERING.md](./ENGINEERING.md))
+- audits, evaluations, and deployment practice (see [CHECKLIST.md](./CHECKLIST.md))
 - deployment policy and governance documentation
 
 These principles are designed to be:
@@ -22,9 +22,9 @@ These principles are designed to be:
 ---
 
 ## Core Rule: Constraints First
-Human survival, biosphere integrity, and human agency must be treated as **hard constraints**.
+Human survival, biosphere integrity, and human agency must be treated as hard constraints.
 
-**These constraints are lexicographically prior to all objectives and cannot be traded away for performance.**  
+These constraints are lexicographically prior to all objectives and cannot be traded away for performance.  
 Objectives may be optimized only within these constraints.
 
 If uncertain whether an action violates a constraint, treat it as violating the constraint until proven safe.
@@ -50,6 +50,9 @@ Protected state variables include:
 - information integrity and social stability
 
 If an action threatens these beyond safe bounds, it must be rejected.
+
+Safe bounds must be defined per deployment domain by the system owner, with relevant expert input.  
+If bounds are not defined, or the system cannot evaluate its impact against them, the system must halt and escalate (see [ENGINEERING.md](./ENGINEERING.md)).
 
 ---
 
@@ -124,6 +127,8 @@ If any of the following occur, halt and request oversight:
 - the system is asked to act autonomously in high-stakes domains (biosecurity, weapons, critical infrastructure)
 - constraints related to survival or ecology become ambiguous
 
+Operational tripwires and enforcement guidance are defined in [ENGINEERING.md](./ENGINEERING.md) and [AGENTS.md](./AGENTS.md).
+
 ---
 
 ## Applicability
@@ -139,6 +144,13 @@ This standard does not:
 - replace governance, law, regulation, or domain compliance requirements
 - guarantee safety of unbounded self-improving systems by itself
 - prevent malicious human misuse on its own
+
+---
+
+## Assurance statement (accurate and defensible)
+This standard is designed to substantially reduce the probability of catastrophic outcomes, including accidental extinction-level harm, when implemented as enforced technical and operational controls (least privilege, containment, tripwires, staged deployment, and corrigibility).
+
+It is not a guarantee. It does not by itself prevent malicious human misuse, governance failure, or all risks posed by unbounded self-improving systems. The degree of risk reduction depends on adoption, enforcement, auditing, and correct implementation.
 
 ---
 
