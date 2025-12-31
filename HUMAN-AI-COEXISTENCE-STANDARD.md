@@ -1,8 +1,7 @@
 # Human–AI Coexistence Standard
 ## Survival-First Guardrails for AI Systems and Their Operators
 
-**Version:** 1.0.1 (repository tag)  
-**Status:** Draft community standard  
+**Status:** Community standard  
 **Scope:** High-impact AI systems and operators
 
 ### Purpose
